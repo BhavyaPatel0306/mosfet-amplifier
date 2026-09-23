@@ -5,6 +5,7 @@ import json
 import re
 import sys
 import zipfile
+from update_manifest import files
 
 
 def main():
@@ -28,6 +29,9 @@ def main():
             errors.append('Checksum mismatch: ' + name)
     if not seen:
         errors.append('Manifest contains no valid files')
+    distributed = {p.relative_to(root).as_posix() for p in files()}
+    for name in sorted(distributed - seen):
+        errors.append('Distributed file missing from manifest: ' + name)
 
     hardware = root / 'hardware'
     for name in ['ELE404Project.kicad_pro', 'ELE404Project.wbk']:
@@ -55,7 +59,7 @@ def main():
         print('\n'.join('FAIL: ' + error for error in errors))
         return 1
     print(f'PASS: {len(seen)} file hashes, four model references, project/workbook JSON, and original ZIP CRC.')
-    print('No simulations or electrical checks were run.')
+    print('This package check does not run simulations or electrical checks.')
     return 0
 
 

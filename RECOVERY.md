@@ -11,3 +11,7 @@ The rebuilt ZIP was checked for CRC errors, extracted into a fresh directory, an
 ## Repository presentation update
 
 The README and supporting guides were expanded, three historical report figures were extracted, and a Python package verifier was added. Original design files, PDFs, models, and archive are unchanged. The checksum manifest was regenerated for this edition. No new circuit simulations were run.
+
+## v0.2.0 verification update
+
+After the original recovery, fresh ngspice runs were completed. See docs/VERIFICATION.md and simulations/README.md. Earlier statements about no simulations describe the recovery stage only. The original schematic and models remain unchanged; the experimental variant is separate.

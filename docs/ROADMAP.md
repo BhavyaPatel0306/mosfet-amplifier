@@ -2,6 +2,8 @@
 
 ## 1. Establish a reproducible baseline
 
+Fresh runs, exact netlists, raw data, and a runner are now included in v0.2.0. The remaining task is full requirement coverage and model/operating-condition validation.
+
 - Reconcile source settings and sweep range with the original report.
 - Run DC, loaded and unloaded AC, and transient analyses with recorded versions and raw data.
 - Map each assignment requirement to a measurement definition and result.
@@ -9,6 +11,8 @@
 Completion means another reader can reproduce measurements from the committed circuit and recorded commands.
 
 ## 2. Investigate output swing
+
+A separate variant now demonstrates 1.568 Vpp at 4.00% THD and 0.9201 mW DC power. Resolve its low gain-stage overdrive and transient current before promoting it to the KiCad project.
 
 - Measure headroom, device currents, and clipping onset over input amplitude.
 - Define a distortion criterion for acceptable swing.

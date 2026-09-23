@@ -1,0 +1,158 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "unloaded_definition": "R10 replaced by 1 Tohm DC reference; all capacitors retained. AC gain referenced to 100 kHz.",
+  "temperature_c": 27,
+  "ngspice_compatibility": "ps",
+  "transient_stop_ms": 80,
+  "max_step_ns": 200,
+  "thd_definition": "Harmonics 2-10 / fundamental, least squares at 100 kHz; percent",
+  "results": {
+    "baseline": {
+      "netlist_sha256": "e58b40a5a8dfa4a1e1312c390a4ad5eba65ce5945f3fc9d954c1a1c44dd7a8cf",
+      "supply_current_a": 0.00030933862905022276,
+      "dc_power_w": 0.001020817475865735,
+      "devices": {
+        "q1": {
+          "id": 2.7222290396332298e-05,
+          "vgs": 0.7333137289321574,
+          "vds": 2.698992616111294,
+          "vth": 0.6884409124845482,
+          "vdsat": 0.10392528463400078,
+          "gm": 0.00041053267896543034,
+          "vgs_minus_vth_v": 0.04487281644760921
+        },
+        "q2": {
+          "id": 8.93281488160993e-05,
+          "vgs": 0.8326459498255859,
+          "vds": 1.3344776390930686,
+          "vth": 0.6884606176520839,
+          "vdsat": 0.17059614327312775,
+          "gm": 0.0008967673467686573,
+          "vgs_minus_vth_v": 0.14418533217350205
+        },
+        "q3": {
+          "id": 9.759042713222326e-05,
+          "vgs": 1.253951320408791,
+          "vds": 2.2258450598187753,
+          "vth": 1.0183311113316285,
+          "vdsat": 0.2557958437434738,
+          "gm": 0.0006997991942284032,
+          "vgs_minus_vth_v": 0.23562020907716263
+        },
+        "q4": {
+          "id": 8.93281488160981e-05,
+          "vgs": 0.8326459498255859,
+          "vds": 1.33447763909258,
+          "vth": 0.6884606176520839,
+          "vdsat": 0.17059614327312775,
+          "gm": 0.0008967673467686495,
+          "vgs_minus_vth_v": 0.14418533217350205
+        }
+      },
+      "as_saved_ac_output_max_v": 0.0,
+      "ac_override": "V2 AC magnitude changed from 0 to 1 for transfer-function measurement only",
+      "ac": {
+        "loaded": {
+          "gain_100khz_db": 64.81942185111944,
+          "upper_3db_hz": 14285095.678407643
+        },
+        "unloaded": {
+          "gain_100khz_db": 65.67093690945306,
+          "upper_3db_hz": 14288189.902835455
+        }
+      },
+      "load_reduction_percent": 9.338218832042477,
+      "transient": {
+        "input_peak_v": 0.001,
+        "output_min_v": -0.6104110611074214,
+        "output_max_v": 0.8993778004056465,
+        "output_vpp": 1.509788861513068,
+        "thd_percent": 27.913199342198713,
+        "previous_window_vpp": 1.511853466984312,
+        "previous_window_thd_percent": 27.844791175581992,
+        "vpp_window_change_percent": -0.13656121551001155,
+        "follower_peak_current_a": 0.0002880289123933752,
+        "follower_min_current_a": 2.6475924618024862e-12
+      }
+    },
+    "candidate": {
+      "netlist_sha256": "9cb70571f52439aa762e5e1a6a765238541b87af16070aa19af9da79c33fa8b7",
+      "supply_current_a": 0.0002788058346981483,
+      "dc_power_w": 0.0009200592545038893,
+      "devices": {
+        "q1": {
+          "id": 4.141713676054998e-05,
+          "vgs": 0.765407961058512,
+          "vds": 1.684575967505736,
+          "vth": 0.6884467233116245,
+          "vdsat": 0.12374990478224623,
+          "gm": 0.000551721575215132,
+          "vgs_minus_vth_v": 0.07696123774688757
+        },
+        "q2": {
+          "id": 4.141713676054897e-05,
+          "vgs": 0.765407961058512,
+          "vds": 1.6845759675050094,
+          "vth": 0.6884467233116245,
+          "vdsat": 0.12374990478224623,
+          "gm": 0.000551721575215123,
+          "vgs_minus_vth_v": 0.07696123774688757
+        },
+        "q3": {
+          "id": 0.0001493661630835258,
+          "vgs": 1.3568646748247262,
+          "vds": 1.6564657776884233,
+          "vth": 1.1540751900644057,
+          "vdsat": 0.23420738469202784,
+          "gm": 0.001224387253784832,
+          "vgs_minus_vth_v": 0.20278948476032044
+        },
+        "q4": {
+          "id": 4.230084706162394e-05,
+          "vgs": 0.8401072531237023,
+          "vds": 1.4513082494302014,
+          "vth": 0.7608558805329882,
+          "vdsat": 0.12720667418306456,
+          "gm": 0.0005598578217542786,
+          "vgs_minus_vth_v": 0.07925137259071402
+        }
+      },
+      "ac": {
+        "loaded": {
+          "gain_100khz_db": 61.15643397761148,
+          "upper_3db_hz": 11016128.829367388
+        },
+        "unloaded": {
+          "gain_100khz_db": 61.68571133090414,
+          "upper_3db_hz": 11106978.102264836
+        }
+      },
+      "load_reduction_percent": 5.9115893753801885,
+      "transient": {
+        "input_peak_v": 0.00075,
+        "output_min_v": -0.7520617464793508,
+        "output_max_v": 0.8158182453261422,
+        "output_vpp": 1.5678799918054929,
+        "thd_percent": 3.99860898966389,
+        "previous_window_vpp": 1.5677594199309373,
+        "previous_window_thd_percent": 3.9716137070534354,
+        "vpp_window_change_percent": 0.007690712811081468,
+        "follower_peak_current_a": 0.00030701496968815045,
+        "follower_min_current_a": 7.70650026199516e-06
+      }
+    }
+  },
+  "engine_banner": [
+    "stdout ** ngspice-44 shared library",
+    "stdout ** Creation Date: Jun 15 2025   06:22:10",
+    "stdout ** ngspice-44 : Circuit level simulation program",
+    "stdout ** Creation Date: Jun 15 2025   06:22:10"
+  ],
+  "source_hashes": {
+    "hardware/ELE404Project.kicad_sch": "d6b791e60c5fb82416e118b97957b886e919c98fac6b604a08bf1e00207d9ff8",
+    "hardware/models/nmos_t.txt": "36021cc75c2e6d3665c61268dee97e7e3ac7f19dcc1b039cc74f2cfc62d955e9",
+    "scripts/run_simulations.py": "ce61154d636b86dd1cc084b63e4590ec6902680073fe61fc9a5adb4bde38fe6d",
+    "scripts/ngspice_shared.py": "b17b91cb6b90acdaf373bbefbbe8dc391fd5b2b976ffad891938311d2a48d3c8"
+  }
+}

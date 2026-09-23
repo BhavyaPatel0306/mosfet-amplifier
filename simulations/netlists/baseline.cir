@@ -1,0 +1,28 @@
+.title KiCad schematic
+.include "../../hardware/models/nmos_t.txt"
+R1 Net-_Q3-D_ Net-_Q1-D_ 22k
+R3 Net-_Q3-D_ Net-_Q1-G_ 2.1Meg
+XQ1 Net-_Q1-D_ Net-_Q1-G_ GND GND nmos_3p3 w=40u l=1u
+C1 Net-_Q1-G_ Net-_C1-Pad2_ 100n
+V2 Net-_C1-Pad2_ GND DC SINE(0 1m 100k) AC 0  
+R2 Net-_Q1-G_ GND 600k
+V1 Net-_Q3-D_ GND DC 3.3 
+C4 GND Net-_Q3-S_ 2p
+C6 Net-_C6-Pad1_ Net-_Q3-S_ 1u
+R9 Net-_Q3-S_ GND 11k
+XQ3 Net-_Q3-D_ Net-_Q3-G_ Net-_Q3-S_ GND nmos_3p3 w=20u l=1u
+R8 Net-_Q3-G_ GND 1.125Meg
+R10 Net-_C6-Pad1_ GND 10k
+R7 Net-_Q3-D_ Net-_Q3-G_ 470k
+R11 Net-_Q3-D_ Net-_Q4-G_ 2Meg
+C5 Net-_Q4-G_ Net-_Q2-D_ 100n
+R12 Net-_Q4-G_ GND 675k
+XQ4 Net-_Q4-D_ Net-_Q4-G_ GND GND nmos_3p3 w=40u l=1u
+C3 Net-_Q3-G_ Net-_Q4-D_ 100n
+R13 Net-_Q3-D_ Net-_Q4-D_ 22k
+R5 Net-_Q2-G_ GND 675k
+R4 Net-_Q3-D_ Net-_Q2-G_ 2Meg
+C2 Net-_Q2-G_ Net-_Q1-D_ 100n
+XQ2 Net-_Q2-D_ Net-_Q2-G_ GND GND nmos_3p3 w=40u l=1u
+R6 Net-_Q3-D_ Net-_Q2-D_ 22k
+.end

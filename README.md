@@ -1,14 +1,16 @@
 # MOSFET Amplifier Design
 
+[![Package checks](https://github.com/BhavyaPatel0306/mosfet-amplifier/actions/workflows/package-checks.yml/badge.svg)](https://github.com/BhavyaPatel0306/mosfet-amplifier/actions/workflows/package-checks.yml)
+
 **Four stages. A 3.3 V supply. A study in gain, bandwidth, power, and output headroom.**
 
 An analog electronics project for **ELE404: Electronics I at Toronto Metropolitan University**, built in **KiCad 9** with the supplied NMOS models. Three common-source stages provide voltage gain; a common-drain stage buffers the output.
 
 [Read the report](docs/project-report.pdf) · [Open the design](hardware/ELE404Project.kicad_pro) · [Reproduce the analysis](docs/SIMULATION.md) · [Results and limitations](docs/RESULTS.md)
 
-![Four-stage amplifier schematic from page 6 of the original report](docs/images/reported-schematic.png)
+![Current committed KiCad schematic exported with KiCad 9.0.4](docs/images/current-schematic.svg)
 
-*Schematic from the original report, not a fresh export of the current project. See the [known differences](docs/SIMULATION.md#known-differences) before reproducing the results.*
+*Fresh export of the actual committed circuit. The original report illustrates a different revision; experimental changes are kept in a separate netlist.*
 
 ## What this project explores
 
@@ -29,17 +31,18 @@ flowchart LR
 
 *Conceptual signal path described in the report; bias and bypass networks are omitted.*
 
-## Reported performance
+## Fresh simulation evidence
 
-The original report records **63.8 dB loaded gain**, **64.6 dB unloaded gain**, approximately **20 MHz bandwidth**, and **0.828 mW DC power**. These are historical report values, **not independently reproduced results**.
+**v0.2.0 includes actual ngspice 44 runs**, raw CSV data, a reproducible runner, and a separate experimental circuit.
 
-The reported **1.33 Vpp output swing falls below the 1.5 Vpp target**. The transient plot also shows clipping, so that value must not be presented as a verified clean output swing. This is a documented design study with an unresolved output-stage limitation.
+- **Original circuit:** 64.82 dB loaded gain, approximately 14.29 MHz upper cutoff, and **1.0208 mW DC power**. Its 1.510 Vpp waveform at 1 mV peak input has **27.91% THD** and clips.
+- **Experimental variant:** 61.16 dB loaded gain and **0.9201 mW DC power**. At 0.75 mV peak input it produces **1.568 Vpp with 4.00% THD**.
 
-![AC response from page 7 of the original report](docs/images/reported-ac-response.png)
+The variant is a measured improvement at the stated input amplitudes, **not a fully compliant replacement**. Gain-stage overdrive is below the guideline, transient follower current exceeds 200 uA, and clean-swing acceptance still needs a defined distortion limit. The original KiCad circuit is preserved.
 
-*Original report figure. A saved plot is supporting documentation, not a substitute for a reproducible simulation run.*
+![Fresh loaded AC comparison](simulations/figures/ac-comparison.svg)
 
-Read the [results notes](docs/RESULTS.md) for the load-sensitivity correction and evidence sources.
+[Measured results and limits](docs/VERIFICATION.md) · [Repeat the runs](simulations/README.md) · [Historical report results](docs/RESULTS.md) · [Versioned releases](https://github.com/BhavyaPatel0306/mosfet-amplifier/releases)
 
 ## Get started
 
@@ -54,7 +57,7 @@ Read the [results notes](docs/RESULTS.md) for the load-sensitivity correction an
 3. Keep `hardware/models/` alongside the project. All four transistor model references use `models/nmos_t.txt`.
 4. Follow the [simulation guide](docs/SIMULATION.md) before running the saved workbook.
 
-**Verification status:** file integrity and package structure have been checked. No fresh SPICE simulations, KiCad GUI validation, or electrical-rule checks were performed during repository preparation. The PCB file is a placeholder, not a completed layout.
+**Verification status:** fresh ngspice DC/AC/transient runs and package checks are documented. GitHub Actions checks packaging, not electrical performance. No KiCad GUI/ERC validation or PCB layout validation is claimed; the PCB remains a placeholder.
 
 ## Repository guide
 
@@ -69,6 +72,7 @@ mosfet-amplifier/
 │   ├── RESULTS.md            Evidence and limitations
 │   ├── ROADMAP.md            Prioritized engineering improvements
 │   └── images/               Figures extracted from the report
+├── simulations/              Portable netlists, raw results, and comparison plots
 ├── originals/                Untouched project ZIP, including backups
 ├── scripts/verify_package.py File-integrity and model-reference checks
 ├── CONTRIBUTING.md           How to submit reproducible improvements
@@ -86,7 +90,7 @@ This checks hashes, model references, saved JSON files, and original archive int
 
 ## Next design steps
 
-Reproduce the saved circuit, reconcile its settings with the report, investigate output-stage clipping, and capture raw data with the exact simulator configuration. See the [roadmap](docs/ROADMAP.md).
+The baseline is now simulated and documented. Next, resolve overdrive, distortion, and peak-current constraints before moving an experimental redesign into KiCad. See the [roadmap](docs/ROADMAP.md).
 
 ## Source material and reuse
 

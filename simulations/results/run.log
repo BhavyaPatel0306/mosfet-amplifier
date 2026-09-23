@@ -1,0 +1,236 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-44 shared library
+stdout ** Creation Date: Jun 15 2025   06:22:10
+stdout ******
+COMMAND: set ngbehavior=ps
+COMMAND: version
+stdout ******
+stdout ** ngspice-44 : Circuit level simulation program
+stdout ** Compiled with KLU Direct Linear Solver
+stdout ** The U. C. Berkeley CAD Group
+stdout ** Copyright 1985-1994, Regents of the University of California.
+stdout ** Copyright 2001-2024, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at https://ngspice.sourceforge.io/bugrep.html
+stdout ** Creation Date: Jun 15 2025   06:22:10
+stdout ******
+COMMAND: set noaskquit
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: op
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 1
+COMMAND: ac dec 10 1k 1Meg
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 31
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: ac dec 200 1 100Meg
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 1601
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: ac dec 200 1 100Meg
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 1601
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: save all @m.xq3.m0[id]
+COMMAND: tran 2e-07 0.08 0.0599 2e-07
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout net-_q3-d_                                 3.3
+stdout net-_q1-d_                             2.69909
+stdout net-_q1-g_                            0.733333
+stdout xq1.d1                                 2.69901
+stdout xq1.s1                             1.96044e-05
+stdout net-_c1-pad2_                                0
+stdout net-_q3-s_                             1.07349
+stdout net-_c6-pad1_                                0
+stdout xq3.d1                                 3.29948
+stdout xq3.s1                                 1.07363
+stdout net-_q3-g_                             2.32759
+stdout net-_q4-g_                             0.83271
+stdout net-_q2-d_                             1.33478
+stdout net-_q4-d_                             1.33478
+stdout xq4.d1                                 1.33454
+stdout xq4.s1                             6.43305e-05
+stdout net-_q2-g_                             0.83271
+stdout xq2.d1                                 1.33454
+stdout xq2.s1                             6.43305e-05
+stdout v1#branch                         -0.000309339
+stdout v2#branch                                    0
+ Reference value :  5.99001e-02
+ Reference value :  6.02803e-02
+ Reference value :  6.06297e-02
+ Reference value :  6.09605e-02
+ Reference value :  6.12907e-02
+ Reference value :  6.16606e-02
+ Reference value :  6.20309e-02
+ Reference value :  6.23975e-02
+ Reference value :  6.27459e-02
+ Reference value :  6.31295e-02
+ Reference value :  6.35081e-02
+ Reference value :  6.37909e-02
+ Reference value :  6.41332e-02
+ Reference value :  6.44607e-02
+ Reference value :  6.48047e-02
+ Reference value :  6.51346e-02
+ Reference value :  6.54959e-02
+ Reference value :  6.57889e-02
+ Reference value :  6.61130e-02
+ Reference value :  6.64307e-02
+ Reference value :  6.67606e-02
+ Reference value :  6.71393e-02
+ Reference value :  6.75255e-02
+ Reference value :  6.79136e-02
+ Reference value :  6.82638e-02
+ Reference value :  6.85847e-02
+ Reference value :  6.89147e-02
+ Reference value :  6.92447e-02
+ Reference value :  6.96146e-02
+ Reference value :  6.99007e-02
+ Reference value :  7.02406e-02
+ Reference value :  7.05359e-02
+ Reference value :  7.08789e-02
+ Reference value :  7.12244e-02
+ Reference value :  7.15344e-02
+ Reference value :  7.18418e-02
+ Reference value :  7.21777e-02
+ Reference value :  7.25307e-02
+ Reference value :  7.28461e-02
+ Reference value :  7.31695e-02
+ Reference value :  7.34918e-02
+ Reference value :  7.38422e-02
+ Reference value :  7.41997e-02
+ Reference value :  7.45101e-02
+ Reference value :  7.48243e-02
+ Reference value :  7.51443e-02
+ Reference value :  7.54903e-02
+ Reference value :  7.58508e-02
+ Reference value :  7.61359e-02
+ Reference value :  7.64604e-02
+ Reference value :  7.68045e-02
+ Reference value :  7.71171e-02
+ Reference value :  7.74871e-02
+ Reference value :  7.77916e-02
+ Reference value :  7.81836e-02
+ Reference value :  7.85418e-02
+ Reference value :  7.88918e-02
+ Reference value :  7.91957e-02
+ Reference value :  7.95179e-02
+ Reference value :  7.98273e-02
+stdout No. of Data Rows : 124621
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: op
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 1
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: ac dec 200 1 100Meg
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 1601
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: ac dec 200 1 100Meg
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+ Reference value :  1.00000e+00
+stdout No. of Data Rows : 1601
+COMMAND: destroy all
+COMMAND: source <RUN>/run.cir
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: KiCad schematic
+COMMAND: save all @m.xq3.m0[id]
+COMMAND: tran 2e-07 0.08 0.0599 2e-07
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout net-_q3-d_                                 3.3
+stdout net-_q1-d_                             1.68472
+stdout net-_q1-g_                            0.765438
+stdout xq1.d1                                 1.68461
+stdout xq1.s1                              2.9827e-05
+stdout net-_c1-pad2_                                0
+stdout vin                                          0
+stdout net-_c6-pad1_                                0
+stdout net-_q3-s_                             1.64303
+stdout xq3.d1                                  3.2996
+stdout xq3.s1                                 1.64314
+stdout net-_q3-g_                                   3
+stdout net-_q4-g_                             1.03895
+stdout net-_q2-d_                             1.68472
+stdout q4s                                   0.198814
+stdout net-_q4-d_                             1.65027
+stdout xq4.d1                                 1.65015
+stdout xq4.s1                                0.198844
+stdout net-_q2-g_                            0.765438
+stdout xq2.d1                                 1.68461
+stdout xq2.s1                              2.9827e-05
+stdout v1#branch                         -0.000278806
+stdout v2#branch                                    0
+ Reference value :  5.99001e-02
+ Reference value :  6.05649e-02
+ Reference value :  6.11737e-02
+ Reference value :  6.17013e-02
+ Reference value :  6.22727e-02
+ Reference value :  6.28929e-02
+ Reference value :  6.35581e-02
+ Reference value :  6.41699e-02
+ Reference value :  6.47963e-02
+ Reference value :  6.54169e-02
+ Reference value :  6.60557e-02
+ Reference value :  6.66623e-02
+ Reference value :  6.73131e-02
+ Reference value :  6.78219e-02
+ Reference value :  6.83779e-02
+ Reference value :  6.89901e-02
+ Reference value :  6.95595e-02
+ Reference value :  7.01211e-02
+ Reference value :  7.06955e-02
+ Reference value :  7.13631e-02
+ Reference value :  7.18835e-02
+ Reference value :  7.24473e-02
+ Reference value :  7.30423e-02
+ Reference value :  7.36159e-02
+ Reference value :  7.42171e-02
+ Reference value :  7.47039e-02
+ Reference value :  7.53095e-02
+ Reference value :  7.58659e-02
+ Reference value :  7.65189e-02
+ Reference value :  7.71249e-02
+ Reference value :  7.77505e-02
+ Reference value :  7.81969e-02
+ Reference value :  7.84775e-02
+ Reference value :  7.89119e-02
+ Reference value :  7.95803e-02
+stdout No. of Data Rows : 100501

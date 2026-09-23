@@ -1,8 +1,10 @@
 # Results, evidence, and limitations
 
+**Fresh runs are now available:** see [v0.2.0 verification](VERIFICATION.md) and [raw results](../simulations/results/summary.json). The remainder of this page describes the historical report.
+
 ## Evidence boundary
 
-The [original report](project-report.pdf) contains the author's simulation discussion and screenshots. Its claims have not been independently reproduced during repository preparation. The [guidelines](design-guidelines.pdf) define the targets. Both PDFs remain unchanged.
+The [original report](project-report.pdf) contains the author's simulation discussion and screenshots. Fresh runs of the supplied circuit give different results; see the verification link above. The [guidelines](design-guidelines.pdf) define the targets. Both PDFs remain unchanged.
 
 ## Historical report values
 
@@ -40,4 +42,4 @@ Figures were extracted without redrawing the circuit or regenerating curves. The
 
 ## Verification scope
 
-File hashes, original ZIP CRC, relative model references, and KiCad project/workbook JSON parsing are package checks. They do not demonstrate circuit correctness, model compatibility, fabrication readiness, or simulation success.
+File hashes, original ZIP CRC, relative model references, and KiCad project/workbook JSON parsing are package checks. They do not demonstrate circuit correctness, model compatibility, fabrication readiness, or simulation success by themselves. The separately documented ngspice runs provide the fresh simulation evidence.

@@ -1,6 +1,6 @@
 # Reproducing the analysis
 
-This is a procedure for a future verification run, not a record of simulations completed during repository preparation.
+Fresh automated runs are available in [VERIFICATION.md](VERIFICATION.md). Use the [reproducible runner](../simulations/README.md) to repeat them. The steps below describe manual inspection in KiCad.
 
 ## Open and inspect
 
