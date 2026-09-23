@@ -36,4 +36,3 @@ The PCB file is a minimal placeholder, not a completed board layout. This packag
 ## Attribution
 
 Original project, report, assignment, and model files are preserved from the supplied attachments. No new license or ownership claim is assigned to those materials.
-

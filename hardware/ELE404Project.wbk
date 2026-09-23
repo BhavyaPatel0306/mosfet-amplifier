@@ -1,0 +1,100 @@
+{
+  "last_sch_text_sim_command": "",
+  "tabs": [
+    {
+      "analysis": "AC",
+      "commands": [
+        ".ac dec 100 1 10Meg",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(102, 194, 165)",
+          "signal": "V(Net-_Q3-S_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(102, 194, 165)",
+          "signal": "V(Net-_Q3-S_) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(Net-_Q3-S_) / V(Net-_C1-Pad2_) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(166, 86, 40)",
+          "signal": "V(Net-_Q4-D_) / V(Net-_Q4-G_) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(255, 255, 51)",
+          "signal": "V(Net-_Q3-S_) / V(Net-_Q3-G_) (gain)",
+          "trace_type": 521
+        }
+      ]
+    },
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 50n 100u 0 50n",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(Net-_C1-Pad2_)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(Net-_C6-Pad1_)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "OP",
+      "commands": [
+        ".op",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ]
+    }
+  ],
+  "user_defined_signals": [
+    "V(Net-_Q3-S_) / V(Net-_C1-Pad2_)",
+    "V(Net-_Q1-D_) / V(Net-_Q1-G_)",
+    "V(Net-_Q2-D_) / V(Net-_Q2-G_)",
+    "V(Net-_Q4-D_) / V(Net-_Q4-G_)",
+    "V(Net-_Q3-S_) / V(Net-_Q3-G_)"
+  ],
+  "version": 6
+}
