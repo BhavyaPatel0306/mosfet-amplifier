@@ -7,3 +7,7 @@ The original project ZIP passed Python zipfile CRC validation. Its complete orig
 Both PDFs and model files were copied byte-for-byte. The report and guidelines were inspected by text extraction. No simulation, KiCad GUI opening, electrical-rule check, or PCB validation was performed.
 
 The rebuilt ZIP was checked for CRC errors, extracted into a fresh directory, and every extracted file was compared byte-for-byte to the staged package. A SHA-256 checksum accompanies the downloadable ZIP.
+
+## Repository presentation update
+
+The README and supporting guides were expanded, three historical report figures were extracted, and a Python package verifier was added. Original design files, PDFs, models, and archive are unchanged. The checksum manifest was regenerated for this edition. No new circuit simulations were run.
