@@ -38,7 +38,7 @@ flowchart LR
 - **Original circuit:** 64.82 dB loaded gain, approximately 14.29 MHz upper cutoff, and **1.0208 mW DC power**. Its 1.510 Vpp waveform at 1 mV peak input has **27.91% THD** and clips.
 - **Experimental variant:** 61.16 dB loaded gain and **0.9201 mW DC power**. At 0.75 mV peak input it produces **1.568 Vpp with 4.00% THD**.
 
-The variant is a measured improvement at the stated input amplitudes, **not a fully compliant replacement**. Gain-stage overdrive is below the guideline, transient follower current exceeds 200 uA, and clean-swing acceptance still needs a defined distortion limit. The original KiCad circuit is preserved.
+At a slightly lower input, the variant delivers a similar output swing with much lower distortion (4.00% vs 27.91% THD) and less power. It does not yet meet every design guideline (gain-stage overdrive and peak follower current), so the original KiCad circuit remains the reference design.
 
 ![Fresh loaded AC comparison](simulations/figures/ac-comparison.svg)
 
@@ -57,7 +57,7 @@ The variant is a measured improvement at the stated input amplitudes, **not a fu
 3. Keep `hardware/models/` alongside the project. All four transistor model references use `models/nmos_t.txt`.
 4. Follow the [simulation guide](docs/SIMULATION.md) before running the saved workbook.
 
-**Verification status:** fresh ngspice DC/AC/transient runs and package checks are documented. GitHub Actions checks packaging, not electrical performance. No KiCad GUI/ERC validation or PCB layout validation is claimed; the PCB remains a placeholder.
+DC, AC, and transient results come from ngspice; CI verifies package integrity. PCB layout is not yet started.
 
 ## Repository guide
 
@@ -86,7 +86,7 @@ Check the downloaded package with Python 3:
 python scripts/verify_package.py
 ```
 
-This checks hashes, model references, saved JSON files, and original archive integrity. **It does not simulate the amplifier.**
+This checks file hashes, model references, and archive integrity (it does not run the simulation).
 
 ## Next design steps
 
